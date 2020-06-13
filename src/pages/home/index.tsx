@@ -2,16 +2,17 @@ import React from 'react';
 import { FiLogIn } from 'react-icons/fi';
 // Componente que resolve o problema de recarregamento do dom
 import { Link } from 'react-router-dom';
-import './styles.css';
+// import './styles.css';
+import { PageHome, Content,Header, Main } from './styled';
 import logo from '../../assets/logo.svg';
 const Home = () => {
 	return (
-		<div id="page-home">
-			<div className="content">
-				<header>
+		<PageHome>
+			<Content>
+				<Header>
 					<img src={logo} alt="Logo"/>
-				</header>
-				<main>
+				</Header>
+				<Main>
 					<h1>Seu marketplace de coleta de resíduos.</h1>
 					<p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 					<Link to="/create-point">
@@ -22,10 +23,9 @@ const Home = () => {
 							Cadastre um ponto de coleta
 						</strong>
 					</Link>
-				</main>
-			</div>
-			
-		</div>
+				</Main>
+			</Content>
+		</PageHome>
 	)
 }
 

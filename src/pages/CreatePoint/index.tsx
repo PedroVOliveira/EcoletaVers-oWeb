@@ -5,7 +5,8 @@ import { Map,  TileLayer, Marker } from 'react-leaflet';
 import axios from 'axios';
 import { LeafletMouseEvent } from 'leaflet';
 import api from '../../services/api';
-import './styles.css';
+// import './styles.css';
+import { PageCreatePoint, Header, Form } from './styled';
 import logo from '../../assets/logo.svg';
 
 // Array ou Objeto : deve informar manualmente o tipo da variavel
@@ -145,15 +146,15 @@ const CreatePoint =  () => {
    
   return (
     <div>
-        <div id="page-create-point">
-          <header>
+        <PageCreatePoint>
+          <Header>
             <img src={logo} alt="logo"/>
             <Link to ="/">
               <FiArrowLeft />
               Voltar para home
             </Link> 
-          </header>
-          <form onSubmit={handleSubmit}>
+          </Header>
+          <Form onSubmit={handleSubmit}>
             <h1>Cadastro do <br/> ponto de coleta</h1>
             <fieldset>
               <legend>
@@ -260,8 +261,8 @@ const CreatePoint =  () => {
             <button type="submit">
               Cadastrar ponto de coleta
             </button>
-          </form>
-        </div>
+          </Form>
+        </PageCreatePoint>
         
     </div>
   );
